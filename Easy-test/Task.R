@@ -3,22 +3,19 @@ library(glmmTMB)
 library(lme4)
 library(ggplot2)
 
-# cat("\nPackage versions:\n")
-# cat("glmmTMB:", packageVersion("glmmTMB"), "\n")
-# cat("lme4:", packageVersion("lme4"), "\n")
-# cat("ggplot2:", packageVersion("ggplot2"), "\n")
+
 
 # Salamanders dataset summary: 
 print(summary(Salamanders))
 
 
-# Model 1 Standard Poisson model 
+# Model 1 Standard GlmmTMB  Poisson model 
 m1 <- glmmTMB(count ~ mined + (1|site), family = poisson, data = Salamanders)  
 
-# Model 2  Zero-inflated   poisson  model
+# Model 2  Zero-inflated  GLmmTMB poisson  model
 m2 <- glmmTMB(count ~ mined + (1|site), ziformula = ~ mined, family = poisson, data = Salamanders)
 
-# Model 3 Binomial  model 
+# Model 3 Binomial GLmmTMB model 
 m3 <- glmmTMB(cbind(incidence, size - incidence) ~ period + (1|herd), family = binomial, data = cbpp)   
 
 # Result : Model 1 summary: 
@@ -40,10 +37,17 @@ m1_lme4 <- glmer(count ~ mined + (1|site), family = poisson, data = Salamanders)
 print(summary(m1_lme4))
 
 
-
+#Visualization 
 site_effects <- ranef(m1)$cond$site
-p  <- ggplot(data.frame(site = rownames(site_effects), effect = site_effects[,1]),
-       aes(x = site, y = effect)) +
-  geom_point() +
-  labs(title = "Random Site Effects on Salamander Counts")
-ggsave("random_effe_plot.png", p, width = 8, height = 6)
+df_site <- data.frame(site = rownames(site_effects), effect = site_effects[,1])
+
+p <-ggplot(df_site, aes(x = site, y = effect, group = 1)) +
+    geom_point(color = "black") +                     
+    geom_line(color = "blue") +                      
+    geom_hline(yintercept = 0, linetype = "dashed") +
+    labs(title = "Random Site Effects on Salamander Counts",
+      x = "Site",
+      y = "Random Effect Estimate") +
+    theme_minimal()                                  
+
+ggsave("Easy-test/random_effe_plot.png", p, width = 8, height = 6)
