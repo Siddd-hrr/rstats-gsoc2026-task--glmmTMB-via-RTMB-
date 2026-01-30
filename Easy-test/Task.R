@@ -32,23 +32,23 @@ m3 <- glmmTMB(cbind(incidence, size - incidence) ~ period + (1|herd), family = b
 
 # Result : Model 1 summary: 
 print(kable(summary(m1)$coefficients$cond, format = "markdown"))
-writeLines(kable(head(Salamanders,format = "html")), "Easy-test/Salamanders_model1.html")
+writeLines(kable(as.data.frame(summary(m1)$coefficients$cond,format = "html")), "Easy-test/Salamanders_model1.html")
 
 
 # Result : Model 2 Zero-inflated poisson summary: 
   #Conditional:
   print(kable(summary(m2)$coefficients$cond, format = "markdown"))  
-  writeLines(kable(summary(m2)$coefficients$cond, format = "html"), "Easy-test/Salamanders_model2_cond.html")
+  writeLines(kable(as.data.frame(summary(m2)$coefficients$cond, format = "html")), "Easy-test/Salamanders_model2_cond.html")
 
   #zi-formula 
   print(kable(summary(m2)$coefficients$zi, format = "markdown"))    
-  writeLines(kable(summary(m2)$coefficients$zi, format = "html"), "Easy-test/Salamanders_model2_zi.html")
+  writeLines(kable(as.data.frame(summary(m2)$coefficients$zi, format = "html")), "Easy-test/Salamanders_model2_zi.html")
   
   cat("AIC comparison: m1 =", AIC(m1), " m2 =", AIC(m2), "\n")
 
 #Result : Model 3 Binomial summary: 
 print(kable(summary(m3)$coefficients$cond, format = "markdown"))
-writeLines(kable(summary(m3)$coefficients$cond, format = "html"), "Easy-test/Salamanders_model3.html")
+writeLines(kable(as.data.frame(summary(m3)$coefficients$cond, format = "html")), "Easy-test/Salamanders_model3.html")
 
 
 #Model 4 : Standard lme4 model
@@ -56,7 +56,7 @@ m1_lme4 <- glmer(count ~ mined + (1|site), family = poisson, data = Salamanders)
 
 # Result: Model 4 Standard lme4 model: 
 print(kable(summary(m1_lme4)$coefficients, format = "markdown"))
-writeLines(kable(summary(m1_lme4)$coefficients, format = "html"), "Easy-test/Salamanders_model4.html")
+writeLines(kable(as.data.frame(summary(m1_lme4)$coefficients, format = "html")), "Easy-test/Salamanders_model4.html")
 
 #Visualization 
 site_effects <- ranef(m1)$cond$site
