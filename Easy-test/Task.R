@@ -2,11 +2,23 @@
 library(glmmTMB)
 library(lme4)
 library(ggplot2)
+library(knitr)
+library(htmltools)
+
 
 
 
 # Salamanders dataset summary: 
-print(summary(Salamanders))
+print(kable(summary(Salamanders), format = "markdown"))
+writeLines(kable(summary(Salamanders,format = "html")), "Easy-test/Salamanders_summary.html")
+
+
+
+#Salamanders dataset head:
+print(kable(head(Salamanders),format = "markdown"))
+writeLines(kable(head(Salamanders,format = "html")), "Easy-test/Salamanders_head.html")
+
+
 
 
 # Model 1 Standard GlmmTMB  Poisson model 
@@ -19,23 +31,32 @@ m2 <- glmmTMB(count ~ mined + (1|site), ziformula = ~ mined, family = poisson, d
 m3 <- glmmTMB(cbind(incidence, size - incidence) ~ period + (1|herd), family = binomial, data = cbpp)   
 
 # Result : Model 1 summary: 
-print(summary(m1)$coefficients$cond)
+print(kable(summary(m1)$coefficients$cond, format = "markdown"))
+writeLines(kable(head(Salamanders,format = "html")), "Easy-test/Salamanders_model1.html")
+
 
 # Result : Model 2 Zero-inflated poisson summary: 
-print(summary(m2)$coefficients$cond)  #Conditional 
-print(summary(m2)$coefficients$zi)    #zi-formula 
-cat("AIC comparison: m1 =", AIC(m1), " m2 =", AIC(m2), "\n")
+  #Conditional:
+  print(kable(summary(m2)$coefficients$cond, format = "markdown"))  
+  writeLines(kable(summary(m2)$coefficients$cond, format = "html"), "Easy-test/Salamanders_model2_cond.html")
+
+  #zi-formula 
+  print(kable(summary(m2)$coefficients$zi, format = "markdown"))    
+  writeLines(kable(summary(m2)$coefficients$zi, format = "html"), "Easy-test/Salamanders_model2_zi.html")
+  
+  cat("AIC comparison: m1 =", AIC(m1), " m2 =", AIC(m2), "\n")
 
 #Result : Model 3 Binomial summary: 
-print(summary(m3)$coefficients$cond)
+print(kable(summary(m3)$coefficients$cond, format = "markdown"))
+writeLines(kable(summary(m3)$coefficients$cond, format = "html"), "Easy-test/Salamanders_model3.html")
 
 
 #Model 4 : Standard lme4 model
 m1_lme4 <- glmer(count ~ mined + (1|site), family = poisson, data = Salamanders) 
 
 # Result: Model 4 Standard lme4 model: 
-print(summary(m1_lme4))
-
+print(kable(summary(m1_lme4)$coefficients, format = "markdown"))
+writeLines(kable(summary(m1_lme4)$coefficients, format = "html"), "Easy-test/Salamanders_model4.html")
 
 #Visualization 
 site_effects <- ranef(m1)$cond$site
