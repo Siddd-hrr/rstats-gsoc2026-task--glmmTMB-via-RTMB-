@@ -42,7 +42,7 @@
 4) Negative values -> sites with lower counts than expected.
 5) Shows which sites have higher or lower salamander counts compared to the average.
  
-![Random Effects Plot](random_effe_plot.png)
+![Random Effects Plot](plots/random_effe_plot.png)
 
 
 
