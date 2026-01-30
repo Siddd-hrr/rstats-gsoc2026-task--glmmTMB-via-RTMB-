@@ -1,9 +1,9 @@
 required_pkg <- c("tidyr", "glmmTMB", "lme4", "ggplot2","readr","dplyr")
 
 for(pkg in required_pkg) {
-  if(!require(pkg, character.only = TRUE)) {
+  if(!require(pkg)) {
     install.packages(pkg)
-    library(pkg, character.only = TRUE)
+    library(pkg)
   }
 }
 

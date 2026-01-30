@@ -1,9 +1,13 @@
-# Used pkg:- glmmTMB , lme4 and ggplot2 
-library(glmmTMB)
-library(lme4)
-library(ggplot2)
-library(knitr)
-library(htmltools)
+# Used pkg:- glmmTMB , lme4 , ggplot2 and knitr 
+required_pkg <- c("glmmTMB","lme4","ggplot2","knitr")
+
+for(pkg in required_pkg) {
+  if(!require(pkg, character.only = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
+
 
 
 
