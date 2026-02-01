@@ -80,7 +80,8 @@
 
 # AIC Comparsion 
 **(Standard GlmmTMB  Poisson model ***Model_1*** V/s Zero-inflated  GLmmTMB poisson  model **Model_2***)**:
-AIC comparison: m1 = 2215.699  m2 = 1908.47
+
+***AIC comparison: m1 = 2215.699  m2 = 1908.47***
 
 
 
