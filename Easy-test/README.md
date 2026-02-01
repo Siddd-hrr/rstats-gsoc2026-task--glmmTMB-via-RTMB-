@@ -6,31 +6,35 @@
 3) "ggplot2" (version: ‘4.0.1’)
 
 # Summary ***Salamanders*** datasets:
-"The Salamanders dataset is indeed a preinstalled example dataset that comes with the glmmTMB package."
+**"The Salamanders dataset is indeed a preinstalled example dataset that comes with the glmmTMB package.":**
+![txt](results/Salamanders_summary.html)
 
 
-# head ***Salamanders*** datasets:
-|site |mined |      cover| sample|        DOP|      Wtemp|       DOY|spp | count|
-|:----|:-----|----------:|------:|----------:|----------:|---------:|:---|-----:|
-|VF-1 |yes   | -1.4423172|      1| -0.5956834| -1.2293786| -1.497003|GP  |     0|
-|VF-2 |yes   |  0.2984104|      1| -0.5956834|  0.0847653| -1.497003|GP  |     0|
-|VF-3 |yes   |  0.3978806|      1| -1.1913668|  1.0141763| -1.294467|GP  |     0|
-|R-1  |no    | -0.4476157|      1|  0.0000000| -3.0233580| -2.712216|GP  |     2|
-|R-2  |no    |  0.5968209|      1|  0.5956834| -0.1443453| -0.686860|GP  |     2|
-|R-3  |no    |  1.3428470|      1|  0.5956834| -0.0146601| -0.686860|GP  |     1|
+# Head ***Salamanders*** datasets:
+![txt](results/Salamanders_head.html)
 
 
 # Results:
-1) Model_1 (Standard GlmmTMB  Poisson model) :  
+1) Model_1 (Standard GlmmTMB  Poisson model) :
+    ![txt](results/Salamanders_model1.html)  
 
 2) Model_2 (Zero-inflated  GLmmTMB poisson  model):
 
+    ![txt](results/Salamanders_model2_cond.html)
+
+    ![txt](results/Salamanders_model2_zi.html)
+    
+
 3) Model_3 (Binomial GLmmTMB model):
+    ![txt](results/Salamanders_model3.html)
 
 4) Model_4 (Standard lme4 model):
+    ![txt](results/Salamanders_model4.html)
 
 # AIC Comparsion 
 **(Standard GlmmTMB  Poisson model ***Model_1*** V/s Zero-inflated  GLmmTMB poisson  model **Model_2***)**:
+AIC comparison: m1 = 2215.699  m2 = 1908.47
+
 
 
 
