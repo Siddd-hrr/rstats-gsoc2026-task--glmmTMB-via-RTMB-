@@ -35,7 +35,7 @@
 
 
 # Results:
-1) Model_1 (Standard GlmmTMB  Poisson model) :
+1) Model_1 (Standard GlmmTMB  Poisson model):
     [link](results/Salamanders_model1.html)  
     |            |  Estimate| Std. Error|   z value| Pr(>&#124;z&#124;)|
     |:-----------|---------:|----------:|---------:|------------------:|
