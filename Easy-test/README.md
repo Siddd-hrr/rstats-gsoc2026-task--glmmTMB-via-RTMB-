@@ -7,29 +7,29 @@
 
 # Summary ***Salamanders*** datasets:
 **"The Salamanders dataset is indeed a preinstalled example dataset that comes with the glmmTMB package.":**
-![txt](results/Salamanders_summary.html)
+[!link](results/Salamanders_summary.html)
 
 
 # Head ***Salamanders*** datasets:
-![txt](results/Salamanders_head.html)
+[!link](results/Salamanders_head.html)
 
 
 # Results:
 1) Model_1 (Standard GlmmTMB  Poisson model) :
-    ![txt](results/Salamanders_model1.html)  
+    [!link](results/Salamanders_model1.html)  
 
 2) Model_2 (Zero-inflated  GLmmTMB poisson  model):
 
-    ![txt](results/Salamanders_model2_cond.html)
+    [!link](results/Salamanders_model2_cond.html)
 
-    ![txt](results/Salamanders_model2_zi.html)
+    [!link](results/Salamanders_model2_zi.html)
     
 
 3) Model_3 (Binomial GLmmTMB model):
-    ![txt](results/Salamanders_model3.html)
+    [!link](results/Salamanders_model3.html)
 
 4) Model_4 (Standard lme4 model):
-    ![txt](results/Salamanders_model4.html)
+    [!link](results/Salamanders_model4.html)
 
 # AIC Comparsion 
 **(Standard GlmmTMB  Poisson model ***Model_1*** V/s Zero-inflated  GLmmTMB poisson  model **Model_2***)**:
