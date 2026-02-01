@@ -44,7 +44,7 @@ writeLines(kable(as.data.frame(summary(m1)$coefficients$cond,format = "html")), 
   # print(kable(summary(m2)$coefficients$cond, format = "markdown"))  
   writeLines(kable(as.data.frame(summary(m2)$coefficients$cond, format = "html")), "Easy-test/results/Salamanders_model2_cond.html")
 
-  #zi-formula 
+  #zi-formula: 
   # print(kable(summary(m2)$coefficients$zi, format = "markdown"))    
   writeLines(kable(as.data.frame(summary(m2)$coefficients$zi, format = "html")), "Easy-test/results/Salamanders_model2_zi.html")
   

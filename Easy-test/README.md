@@ -45,14 +45,14 @@
 
 2) Model_2 (Zero-inflated  GLmmTMB poisson  model):
 
-    [link](results/Salamanders_model2_cond.html)
+    Conditional: [link](results/Salamanders_model2_cond.html)
     |            |  Estimate| Std. Error|   z value| Pr(>&#124;z&#124;)|
     |:-----------|---------:|----------:|---------:|------------------:|
     |(Intercept) | 0.0878965|  0.2328797| 0.3774331|          0.7058517|
     |minedno     | 1.1419232|  0.2461495| 4.6391444|          0.0000035|
 
 
-    [link](results/Salamanders_model2_zi.html)
+    Using Zi-formula: [link](results/Salamanders_model2_zi.html)
     |            |  Estimate| Std. Error|   z value| Pr(>&#124;z&#124;)|
     |:-----------|---------:|----------:|---------:|------------------:|
     |(Intercept) |  1.139304|  0.2350875|  4.846300|            1.3e-06|
