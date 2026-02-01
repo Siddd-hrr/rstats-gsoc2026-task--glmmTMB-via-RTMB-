@@ -29,7 +29,8 @@
 
 4) Model_4 (Standard lme4 model):
 
-# AIC Comparsion (Standard GlmmTMB  Poisson model ***Model_1*** V/s Zero-inflated  GLmmTMB poisson  model ***Model_2*** ):
+# AIC Comparsion 
+**(Standard GlmmTMB  Poisson model ***Model_1*** V/s Zero-inflated  GLmmTMB poisson  model **Model_2***)**:
 
 
 
