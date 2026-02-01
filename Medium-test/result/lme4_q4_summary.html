@@ -1,0 +1,38 @@
+|summary_text                                                            |
+|:-----------------------------------------------------------------------|
+|Linear mixed model fit by REML ['lmerMod']                              |
+|Formula: log_emissions ~ pollutant + source_type + (1 &#124; county_id) |
+|Data: model_data                                                        |
+|                                                                        |
+|REML criterion at convergence: 62910.1                                  |
+|                                                                        |
+|Scaled residuals:                                                       |
+|Min      1Q  Median      3Q     Max                                     |
+|-2.0058 -0.6202 -0.2954  0.3144  4.9695                                 |
+|                                                                        |
+|Random effects:                                                         |
+|Groups    Name        Variance Std.Dev.                                 |
+|county_id (Intercept) 0.02613  0.1617                                   |
+|Residual              0.42358  0.6508                                   |
+|Number of obs: 31694, groups:  county_id, 36                            |
+|                                                                        |
+|Fixed effects:                                                          |
+|Estimate Std. Error t value                                             |
+|(Intercept)                           0.18975    0.03006   6.312        |
+|pollutantCarbon Monoxide              0.70570    0.01447  48.779        |
+|pollutantNitrogen Oxides              0.27620    0.01448  19.070        |
+|pollutantPM10 Primary (Filt + Cond)   0.16798    0.01423  11.802        |
+|pollutantPM2.5 Primary (Filt + Cond)  0.12832    0.01428   8.984        |
+|pollutantSulfur Dioxide              -0.16325    0.01553 -10.515        |
+|pollutantVolatile Organic Compounds   0.29998    0.01341  22.376        |
+|source_typeNon-Diesel                 0.08811    0.00990   8.900        |
+|                                                                        |
+|Correlation of Fixed Effects:                                           |
+|(Intr) plltCM plltNO pPM1P(+C pPM2P(+C plltSD pllVOC                    |
+|plltntCrbnM -0.258                                                      |
+|plltntNtrgO -0.257  0.541                                               |
+|pPM10P(F+C) -0.259  0.550  0.550                                        |
+|pPM2.5P(F+C -0.259  0.548  0.548  0.557                                 |
+|plltntSlfrD -0.244  0.504  0.503  0.512    0.510                        |
+|plltntVltOC -0.268  0.585  0.584  0.595    0.592    0.543               |
+|src_typNn-D -0.267 -0.012 -0.011 -0.021   -0.019    0.008 -0.048        |

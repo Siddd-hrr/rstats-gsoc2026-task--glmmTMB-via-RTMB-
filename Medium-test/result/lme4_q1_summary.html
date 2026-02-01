@@ -1,0 +1,36 @@
+|summary_text                                                     |
+|:----------------------------------------------------------------|
+|Linear mixed model fit by REML ['lmerMod']                       |
+|Formula: log_emissions ~ pollutant + (1 &#124; county_id)        |
+|Data: model_data                                                 |
+|                                                                 |
+|REML criterion at convergence: 62981.8                           |
+|                                                                 |
+|Scaled residuals:                                                |
+|Min      1Q  Median      3Q     Max                              |
+|-1.9811 -0.6192 -0.2994  0.3002  4.9912                          |
+|                                                                 |
+|Random effects:                                                  |
+|Groups    Name        Variance Std.Dev.                          |
+|county_id (Intercept) 0.02623  0.1619                            |
+|Residual              0.42463  0.6516                            |
+|Number of obs: 31694, groups:  county_id, 36                     |
+|                                                                 |
+|Fixed effects:                                                   |
+|Estimate Std. Error t value                                      |
+|(Intercept)                           0.26117    0.02902   8.999 |
+|pollutantCarbon Monoxide              0.70721    0.01448  48.826 |
+|pollutantNitrogen Oxides              0.27762    0.01450  19.145 |
+|pollutantPM10 Primary (Filt + Cond)   0.17068    0.01425  11.981 |
+|pollutantPM2.5 Primary (Filt + Cond)  0.13079    0.01430   9.147 |
+|pollutantSulfur Dioxide              -0.16432    0.01554 -10.571 |
+|pollutantVolatile Organic Compounds   0.30574    0.01341  22.804 |
+|                                                                 |
+|Correlation of Fixed Effects:                                    |
+|(Intr) plltCM plltNO pPM1P(+C pPM2P(+C plltSD                    |
+|plltntCrbnM -0.270                                               |
+|plltntNtrgO -0.270  0.541                                        |
+|pPM10P(F+C) -0.275  0.550  0.550                                 |
+|pPM2.5P(F+C -0.274  0.548  0.548  0.557                          |
+|plltntSlfrD -0.251  0.504  0.503  0.512    0.511                 |
+|plltntVltOC -0.292  0.585  0.584  0.594    0.592    0.544        |

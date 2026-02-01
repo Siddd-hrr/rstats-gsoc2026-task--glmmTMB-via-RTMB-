@@ -1,0 +1,30 @@
+|summary_text                                                                  |
+|:-----------------------------------------------------------------------------|
+|Family: gaussian  ( identity )                                                |
+|Formula:          log_emissions ~ pollutant + (1 &#124; county_id)            |
+|Data: model_data                                                              |
+|                                                                              |
+|AIC       BIC    logLik -2*log(L)  df.resid                                   |
+|62951.9   63027.1  -31466.9   62933.9     31685                               |
+|                                                                              |
+|Random effects:                                                               |
+|                                                                              |
+|Conditional model:                                                            |
+|Groups    Name        Variance Std.Dev.                                       |
+|county_id (Intercept) 0.02548  0.1596                                         |
+|Residual              0.42455  0.6516                                         |
+|Number of obs: 31694, groups:  county_id, 36                                  |
+|                                                                              |
+|Dispersion estimate for gaussian family (sigma^2): 0.425                      |
+|                                                                              |
+|Conditional model:                                                            |
+|Estimate Std. Error z value Pr(>&#124;z&#124;)                                |
+|(Intercept)                           0.26118    0.02866    9.11   <2e-16 *** |
+|pollutantCarbon Monoxide              0.70720    0.01448   48.83   <2e-16 *** |
+|pollutantNitrogen Oxides              0.27762    0.01450   19.15   <2e-16 *** |
+|pollutantPM10 Primary (Filt + Cond)   0.17068    0.01425   11.98   <2e-16 *** |
+|pollutantPM2.5 Primary (Filt + Cond)  0.13079    0.01430    9.15   <2e-16 *** |
+|pollutantSulfur Dioxide              -0.16431    0.01554  -10.57   <2e-16 *** |
+|pollutantVolatile Organic Compounds   0.30574    0.01341   22.81   <2e-16 *** |
+|---                                                                           |
+|Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1                |
