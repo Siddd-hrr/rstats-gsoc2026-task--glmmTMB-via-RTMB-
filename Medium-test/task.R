@@ -24,6 +24,7 @@ air_pollution_analysis <- function(data_path = "Medium-test/air.csv", output_dir
 
 }
 
+#function_1
 filter_data <- function(data_path="Medium-test/air.csv", output_dir){
 
     air_data <- read_csv(data_path)
@@ -52,6 +53,7 @@ filter_data <- function(data_path="Medium-test/air.csv", output_dir){
                           return(air_clean)
 }
 
+#function_2 
 eda <- function(data,output_dir){
     results <- list()
 
@@ -99,7 +101,7 @@ eda <- function(data,output_dir){
 
 }
 
-
+#function_3 
 visualizations <- function(data,  output_dir) {
   
   # 1. Pollutant Emissions by County (Faceted Bar Plot)
@@ -138,7 +140,7 @@ visualizations <- function(data,  output_dir) {
 }
 
 
-
+#function_4 
 # Prepare modeling data
 model_data <- function(data, output_dir){
   model_data <- data |>
@@ -170,7 +172,8 @@ model_data <- function(data, output_dir){
   return(model_data)
 }
 
-# Fitting the data prepared (by: model_data() funct'n)
+#function_5 
+# Fitting the data prepared (by: model_data() funct'n) inside stastical model's . 
 # Model Used : lme4 & glmmTMB 
 fit_models <- function(model_data, output_dir){
   models <- list()
@@ -201,6 +204,7 @@ fit_models <- function(model_data, output_dir){
   return(models)
 } 
 
+#function_6
 # Comparsion different model results quality,  used to answer the question's up there : 
 compare_models <- function(models, output_dir){
   comparison_data <- data.frame()
