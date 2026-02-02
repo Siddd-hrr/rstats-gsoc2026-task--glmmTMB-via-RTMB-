@@ -4,7 +4,7 @@
 1) "glmmTMB" (version: ‘1.1.14’)
 2) "lme4" (version: ‘1.1.38’)
 3) "ggplot2" (version: ‘4.0.1’)
-4) "knitr" (version:)
+4) "knitr" (version: '1.51')
 
 # Summary ***Salamanders*** datasets:
 **"The Salamanders dataset is indeed a preinstalled example dataset that comes with the glmmTMB package.":**

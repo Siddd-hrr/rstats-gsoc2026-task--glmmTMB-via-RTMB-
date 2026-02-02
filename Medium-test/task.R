@@ -177,18 +177,18 @@ model_data <- function(data, output_dir){
 # Model Used : lme4 & glmmTMB 
 fit_models <- function(model_data, output_dir){
   models <- list()
-  
-  # Question 1: Which pollutants have systematically higher emissions across counties?
+
+  # Model_1
   models$lme4_q1 <- lmer(log_emissions ~ pollutant + (1 | county_id), data = model_data)
   models$glmmTMB_q1 <- glmmTMB(log_emissions ~ pollutant + (1 | county_id), 
                                data = model_data, family = gaussian())
   
-  # Question 2: How much variation in emissions is due to county vs pollutant type ?
+  # Model_2
   models$lme4_q3 <- lmer(log_emissions ~ pollutant + (1 | county_id), data = model_data)
   models$glmmTMB_q3 <- glmmTMB(log_emissions ~ pollutant + (1 | county_id), 
                                data = model_data, family = gaussian())
   
-  # Question 3: Are diesel sources consistently higher emitters than non‑diesel sources?
+  # Model_4 
   models$lme4_q4 <- lmer(log_emissions ~ pollutant + source_type + (1 | county_id), data = model_data)
   models$glmmTMB_q4 <- glmmTMB(log_emissions ~ pollutant + source_type + (1 | county_id), 
                                data = model_data, family = gaussian())
