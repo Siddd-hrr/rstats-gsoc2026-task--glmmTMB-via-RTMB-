@@ -1,7 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-
+// [[Rcpp::export]]
 IntegerVector prime_sieve(double n_in) {
   try {
     // parse to Integer 

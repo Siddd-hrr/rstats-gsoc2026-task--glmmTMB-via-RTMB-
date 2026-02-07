@@ -4,5 +4,5 @@
 #' @return GCD of a and b
 #' @export
 gcd_cpp <- function(a, b) {
-  .Call(`_numTheory_gcd_cpp`, a, b)
+  .Call(`_numTheory_gcd_cpp`, c(a,b))
 }

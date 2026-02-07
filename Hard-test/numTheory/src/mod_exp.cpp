@@ -1,7 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-
+// [[Rcpp::export]]
 long long mod_exp(double base_in, double exp_in, double mod_in) {
   try {
     // parse to integer 

@@ -1,7 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-
+// [[Rcpp::export]]
 List cor_cov_cpp(NumericVector x, NumericVector y) {
   try {
     if (x.size() != y.size()) {

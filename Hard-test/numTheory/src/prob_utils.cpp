@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace Rcpp;
 
-
+// [[Rcpp::export]]
 double normal_pdf(double x, double mean, double sd) {
   try {
     if (sd <= 0) {
@@ -18,7 +18,7 @@ double normal_pdf(double x, double mean, double sd) {
   }
 }
 
-
+// [[Rcpp::export]]
 double normal_cdf(double x, double mean, double sd) {
   try {
     if (sd <= 0) {

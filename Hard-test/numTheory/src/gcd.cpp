@@ -1,6 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+// [[Rcpp::export]]
 long long gcd_cpp(NumericVector input) {
   try {
     if (input.size() != 2) {
