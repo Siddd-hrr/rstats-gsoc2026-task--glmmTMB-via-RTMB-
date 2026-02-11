@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+%\VignetteIndexEntry{Prime Number Sieve}
+%\VignettePackage{numTheory}
+
+\title{Prime Number Generation using prime_sieve}
+\author{Siddhesh Akole}
+
+\begin{document}
+\maketitle
+
+This vignette demonstrates the \code{prime_sieve} function from the \pkg{numTheory} package.
+The function generates all prime numbers up to a given limit using the Sieve of Eratosthenes,
+an efficient algorithm for prime number generation.
+
+\section{Inputs}
+The function takes one integer input:
+- \code{n}: the upper bound up to which prime numbers are generated.
+
+\section{Example}
+Here we generate prime numbers up to 30:
+
+<<echo=TRUE, results=TRUE>>=
+library(numTheory)
+
+prime_sieve(30)
+@
+
+\section{Constraints}
+In R, exact integer range is: \code{- .Machine\$integer.max} to \code{.Machine\$integer.max}.  
+For doubles, the representable range is: \code{.Machine\$double.xmin} to \code{.Machine\$double.xmax}.  
+
+
+\section{Edge Cases}
+- \code{n < 2}: returns an empty vector (no primes below 2).  
+- \code{n = 2}: returns \code{2} as the only prime.  
+- Large \code{n}: performance depends on memory, but algorithm remains efficient.
+
+<<echo=TRUE, results=TRUE>>=
+# Edge case: n < 2
+prime_sieve(1)
+
+# Edge case: n = 2
+prime_sieve(2)
+@
+
+\section{Complexity}
+The \code{prime_sieve} function uses the Sieve of Eratosthenes, which runs in 
+\(\mathcal{O}(n \log \log n)\) time, making it efficient for generating primes 
+up to large limits.
+
+\section{Summary}
+The \code{prime_sieve} function provides a fast and reliable way to generate prime numbers,
+useful for number theory, cryptography, and algorithmic applications.
+
+\end{document}

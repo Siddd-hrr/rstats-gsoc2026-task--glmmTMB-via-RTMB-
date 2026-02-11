@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+%\VignetteIndexEntry{Greatest Common Divisor}
+%\VignettePackage{numTheory}
+
+\title{Greatest Common Divisor using gcd_cpp}
+\author{Siddhesh Akole}
+
+\begin{document}
+\maketitle
+
+This vignette demonstrates the \code{gcd_cpp} function from the \pkg{numTheory} package.
+The function computes the greatest common divisor (GCD) of two integers efficiently
+using a C++ backend. The GCD is the largest integer that divides both numbers without
+leaving a remainder.
+
+\section{Inputs}
+The function takes two integer inputs:
+- \code{a}: the first integer.  
+- \code{b}: the second integer.  
+The output is a single integer representing the greatest common divisor of \code{a} and \code{b}.
+
+\section{Basic Example}
+Here we compute the GCD of two numbers:
+
+<<echo=TRUE, results=TRUE>>=
+library(numTheory)
+
+# Compute gcd of 48 and 18
+gcd_cpp(48, 18)
+@
+
+\section{Properties}
+The GCD has several useful properties:
+- If one number divides the other, the GCD is the smaller number.  
+- If the numbers are coprime (no common factors), the GCD is 1.  
+
+<<echo=TRUE, results=TRUE>>=
+# Coprime example
+gcd_cpp(17, 29)
+
+# Divisible example
+gcd_cpp(12, 36)
+@
+
+\section{Constraints}
+In R, exact integer numerical range is: \code{.Machine\$integer.max} to  \code{- .Machine\$integer.max}.  
+For doubles, the numerical range is: \code{.Machine\$double.xmax}  to \code{.Machine\$double.xmin}.
+
+\section{Complexity}
+The \code{gcd_cpp} function uses the Euclidean algorithm, which runs in 
+\(\mathcal{O}(\log \min(a,b))\) time.
+
+\section{Summary}
+The \code{gcd_cpp} function provides a fast and reliable way to compute the greatest
+common divisor, making it useful for number theory, algorithms, and cryptographic
+applications.
+
+\end{document}

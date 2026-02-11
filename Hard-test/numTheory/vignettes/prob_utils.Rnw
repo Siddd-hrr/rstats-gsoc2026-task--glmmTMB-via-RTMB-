@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+%\VignetteIndexEntry{Probability Utilities}
+%\VignettePackage{numTheory}
+
+\title{Probability Utilities in numTheory}
+\author{Siddhesh}
+
+\begin{document}
+\maketitle
+
+This vignette demonstrates the probability functions provided by the 
+\pkg{numTheory} package: \code{normal_pdf}, \code{normal_cdf}.
+These functions allow users to compute probability density and cumulative distribution.
+
+\section{normal_pdf}
+The probability density function of the normal distribution gives the height of the 
+curve at a point. While the density itself is not a probability, it indicates how 
+concentrated values are around that point. Here, \code{x} is the point being evaluated, 
+\code{mean} is the center of the distribution, and \code{sd} is the standard deviation, 
+which controls the spread of the distribution.
+
+normal_pdf(x,mean,sd)
+
+<<echo=TRUE, results=TRUE>>=
+library(numTheory)
+# Standard normal density at x = 0
+normal_pdf(0, mean = 0, sd = 1)     
+
+# Density at x = 1.96 (approx. 95% cutoff)
+normal_pdf(1.96, mean = 0, sd = 1)
+@
+
+
+\section{normal_cdf}
+The cumulative distribution function provides probabilities that a random variable
+is less than or equal to a given value. Here, \code{mean} is the center of the 
+distribution and \code{sd} is the standard deviation, which controls how spread out 
+the distribution is. The input value \code{x} is the point at which the probability 
+is evaluated.
+
+normal_cdf(x,mean,sd)
+
+<<echo=TRUE, results=TRUE>>=
+library(numTheory)
+
+# Probability that a standard normal variable <= 0
+normal_cdf(0, mean = 0, sd = 1)
+
+
+# Probability that a standard normal variable <= 1.96
+normal_cdf(1.96, mean = 0, sd = 1) 
+@
+
+\section{Summary}
+These probability utilities provide a simple interface for common statistical tasks:
+evaluating densities, cumulative probabilities, and relationships between variables.
+
+\end{document}
