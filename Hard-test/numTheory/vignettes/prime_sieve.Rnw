@@ -31,9 +31,9 @@ For doubles, the representable range is: \code{.Machine\$double.xmin} to \code{.
 
 
 \section{Edge Cases}
-- \code{n < 2}: returns an empty vector (no primes below 2).  
-- \code{n = 2}: returns \code{2} as the only prime.  
-- Large \code{n}: performance depends on memory, but algorithm remains efficient.
+# Edge case1: \code{n < 2}: returns an empty vector (no primes below 2).  
+# Edge case2: \code{n = 2}: returns \code{2} as the only prime.  
+# Edge case3:  Large \code{n}: performance depends on memory, but algorithm remains efficient.
 
 <<echo=TRUE, results=TRUE>>=
 # Edge case: n < 2

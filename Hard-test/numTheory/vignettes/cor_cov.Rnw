@@ -55,7 +55,6 @@ y3 <- c(1,2,3)
 try(cor_cov(x, y3))
 @
 
-
 \section{Summary}
 The \code{cor_cov} function provides a convenient way to compute correlation and
 covariance together, making it easy to analyze relationships between variables.

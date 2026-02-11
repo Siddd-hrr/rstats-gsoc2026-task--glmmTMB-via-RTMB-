@@ -3,7 +3,7 @@
 %\VignettePackage{numTheory}
 
 \title{Probability Utilities in numTheory}
-\author{Siddhesh}
+\author{Siddhesh Akole}
 
 \begin{document}
 \maketitle
