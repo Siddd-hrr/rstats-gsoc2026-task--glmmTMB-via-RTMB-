@@ -1,5 +1,7 @@
 #include <Rcpp.h>
+#include <cmath>
 using namespace Rcpp;
+using namespace std; 
 
 // [[Rcpp::export]]
 List cor_cov_cpp(NumericVector x, NumericVector y) {
@@ -23,13 +25,13 @@ List cor_cov_cpp(NumericVector x, NumericVector y) {
     }
 
     cov /= (n - 1);
-    double cor = cov / std::sqrt((var_x / (n - 1)) * (var_y / (n - 1)));
+    double cor = cov / sqrt((var_x / (n - 1)) * (var_y / (n - 1)));
 
     return List::create(
       _["covariance"] = cov,
       _["correlation"] = cor
     );
-  } catch (std::exception &ex) {
+  } catch (exception &ex) {
     stop("Error in cor_cov_cpp(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in cor_cov_cpp().");

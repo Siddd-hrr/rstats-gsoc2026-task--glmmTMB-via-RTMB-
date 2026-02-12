@@ -1,37 +1,36 @@
 #include <Rcpp.h>
+#include <cmath>
 using namespace Rcpp;
+using namespace std; 
 
 // [[Rcpp::export]]
-long long mod_exp(double base_in, double exp_in, double mod_in) {
+double normal_pdf(double x, double mean, double sd) {
   try {
-    // parse to integer 
-    long long base = (long long)std::llround(base_in);
-    long long exp  = (long long)std::llround(exp_in);
-    long long mod  = (long long)std::llround(mod_in);
-
-    if (mod <= 0) {
-      stop("mod_exp() requires modulus > 0.");
+    if (sd <= 0) {
+      stop("normal_pdf() requires sd > 0.");
     }
-    if (exp < 0) {
-      stop("mod_exp() does not support negative exponents.");
-    }
-
-    long long result = 1;
-    long long b = base % mod;
-
-    while (exp > 0) {
-      if (exp % 2 == 1) {
-        result = (result * b) % mod;
-      }
-      b = (b * b) % mod;
-      exp /= 2;
-    }
-
-    return result;
-
-  } catch (std::exception &ex) {
-    stop("Error in mod_exp(): %s", ex.what());
+    double coeff = 1.0 / (sd * sqrt(2.0 * M_PI));
+    double exponent = -0.5 * pow((x - mean) / sd, 2);
+    return coeff * exp(exponent);
+  } catch (exception &ex) {
+    stop("Error in normal_pdf(): %s", ex.what());
   } catch (...) {
-    stop("Unknown error in mod_exp().");
+    stop("Unknown error in normal_pdf().");
   }
 }
+
+// [[Rcpp::export]]
+double normal_cdf(double x, double mean, double sd) {
+  try {
+    if (sd <= 0) {
+      stop("normal_cdf() requires sd > 0.");
+    }
+    double z = (x - mean) / (sd * sqrt(2.0));
+    return 0.5 * (1.0 + erf(z));
+  } catch (exception &ex) {
+    stop("Error in normal_cdf(): %s", ex.what());
+  } catch (...) {
+    stop("Unknown error in normal_cdf().");
+  }
+}
+

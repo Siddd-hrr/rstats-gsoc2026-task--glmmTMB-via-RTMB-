@@ -1,5 +1,7 @@
 #include <Rcpp.h>
+#include<cmath>
 using namespace Rcpp;
+using namespace std; 
 
 // [[Rcpp::export]]
 long long gcd_cpp(NumericVector input) {
@@ -9,15 +11,15 @@ long long gcd_cpp(NumericVector input) {
     }
 
     // parse  to integer 
-    long long a = (long long)std::llround(input[0]);
-    long long b = (long long)std::llround(input[1]);
+    long long a = (long long) llround(input[0]);
+    long long b = (long long) llround(input[1]);
 
     if (a == 0 && b == 0) {
       stop("gcd_cpp() undefined for both inputs equal to zero.");
     }
 
-    a = std::abs(a);
-    b = std::abs(b);
+    a =  abs(a);
+    b =  abs(b);
 
     while (b != 0) {
       long long temp = b;
@@ -26,7 +28,7 @@ long long gcd_cpp(NumericVector input) {
     }
     return a;
 
-  } catch (std::exception &ex) {
+  } catch (exception &ex) {
     stop("Error in gcd_cpp(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in gcd_cpp().");
