@@ -4,18 +4,25 @@
 
 # PACKAGE_NAME: "numTheory"
 
-***Instructions_to_install_package: {command's}***:
--    **Step1: Install devtools if not already installed:**
-    { install.packages("devtools") } 
--    **Step2:**
-    { devtools::install_github("yourusername/numTheory") }
--   **Step3:**
-    { library("numTheory") }
+---
 
-***functions_numTheory_provide: {command's!}***
+## Prerequisites
+- R (version 4.0 or higher)
+- Rtools (Windows) or build-essential (Linux)
+
+---
+
+***Instructions_to_install_package: { command's inside R_terminal }***:
+-   **Step1: Install devtools if not already installed:**  install.packages("devtools") 
+-   **Step2:**   devtools::install_github("Siddd-hrr/rstats-gsoc2026-task--glmmTMB-via-RTMB-/Hard-test/numTheory") 
+-   **Step3:**   library("numTheory")
+
+---
+
+***functions_numTheory_provide: { command's! inside R_terminal }***
 
 1) [gcd](src/gcd.cpp): Computes the greatest common divisor of two integers
-    - [vignette_gcd](vignettes/gcd.Rnw) :{ vignette("gcd_cpp", package = "numTheory") }
+    - [vignette_gcd](vignettes/gcd.Rnw) : ```bash vignette("gcd_cpp", package = "numTheory")```
     - Syntax : gcd_cpp(a,b)
 2) [mod_exp](src/mod_exp.cpp): Performs modular exponentiation using fast exponentiation.
     - [vignette_mod_exp](vignettes/mod_exp.Rnw): { vignette("mod_exp", package = "numTheory") }
@@ -32,6 +39,31 @@
 6) [normal_cdf](src/prob_utils.cpp): Evaluates the cumulative distribution function of the normal distribution.
     - [vignette_normal_cdf](vignettes/prob_utils.Rnw): { vignette("prob_util", package = "numTheory") }
     - Syntax: normal_cdf(x, mean, sd)
+
+---
+
+###  list all the vignette package available. 
+-   vignette(package = "numTheory")
+
+---
+
+### Testing & Validation
+
+To verify that the package builds and all functions work correctly, run:
+```bash
+R CMD check numTheory
+```
+or 
+
+```bash 
+library(devtools)
+check("numTheory")
+```
+
+---
+
+
+
 
 
 
