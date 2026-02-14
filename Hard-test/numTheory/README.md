@@ -1,12 +1,12 @@
-# HARD_test
+## HARD_test
 
-# PACKAGE_AUTHOR: "Siddhesh Akole"
+## PACKAGE_AUTHOR: "Siddhesh Akole"
 
-# PACKAGE_NAME: "numTheory"
+## PACKAGE_NAME: "numTheory"
 
 ---
 
-## Prerequisites
+### Prerequisites
 - R (version 4.0 or higher)
 - Rtools (Windows) or build-essential (Linux)
 
@@ -30,8 +30,9 @@
 
 ***functions_numTheory_provide: { command's! inside R_terminal }***
 
-1) [gcd](src/gcd.cpp): Computes the greatest common divisor of two integers
-    - [vignette_gcd](vignettes/gcd.Rnw) : 
+1) [gcd](src/gcd.cpp): Computes the greatest common divisor of two integers.
+
+    - [vignette_gcd](vignettes/gcd.Rnw) 
     ```bash 
     vignette("gcd_cpp", package = "numTheory")
     ```
@@ -40,7 +41,8 @@
     gcd_cpp(a,b)
     ```
 2) [mod_exp](src/mod_exp.cpp): Performs modular exponentiation using fast exponentiation.
-    - [vignette_mod_exp](vignettes/mod_exp.Rnw): 
+
+    - [vignette_mod_exp](vignettes/mod_exp.Rnw)
     ```bash 
     vignette("mod_exp", package = "numTheory")
     ``` 
@@ -49,7 +51,8 @@
     mod_exp(base, exp, mod)
     ```
 3) [prime_sieve](src/prime_sieve.cpp): Generates all prime numbers up to n using the Sieve of Eratosthenes.
-    - [vignette_prime_sieve](vignettes/prime_sieve.Rnw): 
+
+    - [vignette_prime_sieve](vignettes/prime_sieve.Rnw)
     ```bash
     vignette("prime_sieve", package = "numTheory") 
     ```
@@ -58,7 +61,8 @@
     prime_sieve(n) 
     ```
 4) [cor_cov](src/cor_cov.cpp): Computes both correlation and covariance between two numeric vectors.
-    - [vignette_cor_cov](vignettes/cor_cov.Rnw): 
+
+    - [vignette_cor_cov](vignettes/cor_cov.Rnw)
     ```bash 
     vignette("cor_cov", package = "numTheory")
     ``` 
@@ -67,16 +71,18 @@
     cor_cov(x, y)
     ```
 5) [normal_pdf](src/prob_utils.cpp): Evaluates the probability density function of the normal distribution.
-    - [vignette_normal_pdf](vignettes/prob_utils.Rnw):
+
+    - [vignette_normal_pdf](vignettes/prob_utils.Rnw)
     ```bash  
     vignette("prob_util", package = "numTheory") 
     ```
-    - Syntax: 
+    - Syntax
     ```bash
     normal_pdf(x, mean, sd)
     ```
 6) [normal_cdf](src/prob_utils.cpp): Evaluates the cumulative distribution function of the normal distribution.
-    - [vignette_normal_cdf](vignettes/prob_utils.Rnw):
+
+    - [vignette_normal_cdf](vignettes/prob_utils.Rnw)
     ```bash  
     vignette("prob_util", package = "numTheory") 
     ```
