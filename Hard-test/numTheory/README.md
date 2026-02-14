@@ -1,8 +1,10 @@
-## HARD_test
+## HARD-Test
 
-## PACKAGE_AUTHOR: "Siddhesh Akole"
+## PACKAGE_AUTHOR: 
+Siddhesh Akole
 
-## PACKAGE_NAME: "numTheory"
+## PACKAGE_NAME: 
+numTheory
 
 ---
 
@@ -106,6 +108,7 @@ To verify that the package builds and all functions work correctly, run:
 ```bash
 R CMD check numTheory
 ```
+
 or 
 
 ```bash 
