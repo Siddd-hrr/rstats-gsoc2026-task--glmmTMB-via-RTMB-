@@ -28,7 +28,7 @@ long long gcd_cpp(NumericVector input) {
     }
     return a;
 
-  } catch (exception &ex) {
+  } catch (std::exception &ex) {
     stop("Error in gcd_cpp(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in gcd_cpp().");

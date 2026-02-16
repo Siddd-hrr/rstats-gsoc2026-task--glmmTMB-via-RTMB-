@@ -31,7 +31,7 @@ List cor_cov_cpp(NumericVector x, NumericVector y) {
       _["covariance"] = cov,
       _["correlation"] = cor
     );
-  } catch (exception &ex) {
+  } catch (std::exception &ex) {
     stop("Error in cor_cov_cpp(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in cor_cov_cpp().");

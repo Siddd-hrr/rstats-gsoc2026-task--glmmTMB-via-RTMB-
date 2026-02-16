@@ -12,7 +12,7 @@ double normal_pdf(double x, double mean, double sd) {
     double coeff = 1.0 / (sd * sqrt(2.0 * M_PI));
     double exponent = -0.5 * pow((x - mean) / sd, 2);
     return coeff * exp(exponent);
-  } catch (exception &ex) {
+  } catch (std::exception &ex) {
     stop("Error in normal_pdf(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in normal_pdf().");
@@ -27,7 +27,7 @@ double normal_cdf(double x, double mean, double sd) {
     }
     double z = (x - mean) / (sd * sqrt(2.0));
     return 0.5 * (1.0 + erf(z));
-  } catch (exception &ex) {
+  } catch (std::exception &ex) {
     stop("Error in normal_cdf(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in normal_cdf().");

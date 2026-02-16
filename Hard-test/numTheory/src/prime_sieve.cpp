@@ -31,7 +31,7 @@ IntegerVector prime_sieve(double n) {  // R by default considers numeric values 
 
     return wrap(primes);
 
-  } catch (exception &ex) {
+  } catch (std::exception &ex) {
     stop("Error in prime_sieve(): %s", ex.what());
   } catch (...) {
     stop("Unknown error in prime_sieve().");
