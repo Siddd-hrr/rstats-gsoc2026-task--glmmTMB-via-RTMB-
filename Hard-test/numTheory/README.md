@@ -14,7 +14,7 @@ numTheory
 
 ---
 
-***Instructions_to_install_package: { command's inside R_terminal }***:
+### Instructions_to_install_package:
 -   **Step1: Install devtools if not already installed:**
     ```bash
     install.packages("devtools") 
@@ -30,7 +30,7 @@ numTheory
 
 ---
 
-***functions_numTheory_provide: { command's! inside R_terminal }***
+### Functions_numTheory_provide:
 
 1) [gcd](src/gcd.cpp): Computes the greatest common divisor of two integers.
 
@@ -113,6 +113,8 @@ or
 
 ```bash 
 library(devtools)
+```
+```bash
 check("numTheory")
 ```
 
