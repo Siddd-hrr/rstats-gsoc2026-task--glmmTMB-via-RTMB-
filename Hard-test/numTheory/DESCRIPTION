@@ -14,7 +14,8 @@ LinkingTo: Rcpp
 Imports: Rcpp
 Suggests: 
     knitr,
+    Sweave,
     rmarkdown,
     testthat (>= 3.0.0)
-VignetteBuilder: knitr
+VignetteBuilder: Sweave
 Config/testthat/edition: 3
