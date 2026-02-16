@@ -1,0 +1,12 @@
+---
+title: "Correlation and Covariance using cor_cov"
+author: "Siddhesh Akole"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Correlation and Covariance}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(numTheory)
