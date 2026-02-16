@@ -1,0 +1,12 @@
+---
+title: "Prime Number Generation using prime_sieve"
+author: "Siddhesh Akole"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Prime Number Sieve}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(numTheory)

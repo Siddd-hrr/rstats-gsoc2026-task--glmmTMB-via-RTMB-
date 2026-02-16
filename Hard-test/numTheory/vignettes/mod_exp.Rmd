@@ -1,0 +1,12 @@
+---
+title: "Modular Exponentiation using mod_exp"
+author: "Siddhesh Akole"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Modular Exponentiation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(numTheory)
