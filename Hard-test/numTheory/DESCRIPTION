@@ -3,17 +3,18 @@ Title: Number Theory and Probability Utilities
 Version: 0.0.0.9000
 Authors@R: 
     person("Siddhesh", "Akole", , "siddheshakole@gmail.com", role = c("aut", "cre"))
-Description: Provides number theory functions (gcd, prime sieve, modular exponentiation) 
-    and probability utilities (normal pdf/cdf, correlation/covariance). Designed for 
-    reproducible workflows and mentor-friendly documentation.
+Description: Provides efficient number theory functions (greatest common divisor, 
+    prime number generation via sieve, modular exponentiation) and probability 
+    utilities (normal PDF/CDF, correlation, covariance).
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-LinkingTo: 
-    Rcpp
-Imports: 
-    Rcpp
+LinkingTo: Rcpp
+Imports: Rcpp
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
+VignetteBuilder: knitr
 Config/testthat/edition: 3
