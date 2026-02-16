@@ -34,7 +34,7 @@ numTheory
 
 1) [gcd](src/gcd.cpp): Computes the greatest common divisor of two integers.
 
-    - [vignette_gcd](src/vignette/gcd.Rnw) 
+    - [vignette_gcd](vignettes/gcd.Rnw) 
     ```bash 
     vignette("gcd", package = "numTheory")
     ```
@@ -44,7 +44,7 @@ numTheory
     ```
 2) [mod_exp](src/mod_exp.cpp): Performs modular exponentiation using fast exponentiation.
 
-    - [vignette_mod_exp](src/vignette/mod_exp.Rnw)
+    - [vignette_mod_exp](vignettes/mod_exp.Rnw)
     ```bash 
     vignette("mod_exp", package = "numTheory")
     ``` 
@@ -54,7 +54,7 @@ numTheory
     ```
 3) [prime_sieve](src/prime_sieve.cpp): Generates all prime numbers up to n using the Sieve of Eratosthenes.
 
-    - [vignette_prime_sieve](src/vignette/prime_sieve.Rnw)
+    - [vignette_prime_sieve](vignettes/prime_sieve.Rnw)
     ```bash
     vignette("prime_sieve", package = "numTheory") 
     ```
@@ -64,7 +64,7 @@ numTheory
     ```
 4) [cor_cov](src/cor_cov.cpp): Computes both correlation and covariance between two numeric vectors.
 
-    - [vignette_cor_cov](src/vignette/cor_cov.Rnw)
+    - [vignette_cor_cov](vignettes/cor_cov.Rnw)
     ```bash 
     vignette("cor_cov", package = "numTheory")
     ``` 
@@ -74,7 +74,7 @@ numTheory
     ```
 5) [normal_pdf](src/prob_utils.cpp): Evaluates the probability density function of the normal distribution.
 
-    - [vignette_normal_pdf](src/vignette/prob_utils.Rnw)
+    - [vignette_normal_pdf](vignettes/prob_utils.Rnw)
     ```bash  
     vignette("prob_util", package = "numTheory") 
     ```
@@ -84,7 +84,7 @@ numTheory
     ```
 6) [normal_cdf](src/prob_utils.cpp): Evaluates the cumulative distribution function of the normal distribution.
 
-    - [vignette_normal_cdf](src/vignette/prob_utils.Rnw)
+    - [vignette_normal_cdf](vignettes/prob_utils.Rnw)
     ```bash  
     vignette("prob_util", package = "numTheory") 
     ```

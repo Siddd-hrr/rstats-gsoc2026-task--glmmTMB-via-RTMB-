@@ -1,8 +1,11 @@
-\documentclass[a4paper]{article}
-%\VignetteIndexEntry{Prime Number Sieve}
-%\VignettePackage{numTheory}
+\documentclass{article}
+\usepackage{Rd}
+\SweaveOpts{concordance=TRUE}
 
-\title{Prime Number Generation using prime_sieve}
+\VignetteIndexEntry{Prime Number Sieve}
+\VignettePackage{numTheory}
+
+\title{Prime Number Generation using prime\_sieve}
 \author{Siddhesh Akole}
 
 \begin{document}
@@ -14,12 +17,15 @@ an efficient algorithm for prime number generation.
 
 \section{Inputs}
 The function takes one integer input:
-- \code{n}: the upper bound up to which prime numbers are generated.
+
+\begin{itemize}
+\item \code{n}: the upper bound up to which prime numbers are generated.
+\end{itemize}
 
 \section{Example}
 Here we generate prime numbers up to 30:
 
-<<echo=TRUE, results=TRUE>>=
+<<echo=TRUE, results=verbatim>>=
 library(numTheory)
 
 prime_sieve(30)
@@ -29,13 +35,14 @@ prime_sieve(30)
 In R, exact integer range is: \code{- .Machine\$integer.max} to \code{.Machine\$integer.max}.  
 For doubles, the representable range is: \code{.Machine\$double.xmin} to \code{.Machine\$double.xmax}.  
 
-
 \section{Edge Cases}
-# Edge case1: \code{n < 2}: returns an empty vector (no primes below 2).  
-# Edge case2: \code{n = 2}: returns \code{2} as the only prime.  
-# Edge case3:  Large \code{n}: performance depends on memory, but algorithm remains efficient.
+\begin{itemize}
+\item Edge case1: \code{n < 2}: returns an empty vector (no primes below 2).
+\item Edge case2: \code{n = 2}: returns \code{2} as the only prime.
+\item Edge case3: Large \code{n}: performance depends on memory, but algorithm remains efficient.
+\end{itemize}
 
-<<echo=TRUE, results=TRUE>>=
+<<echo=TRUE, results=verbatim>>=
 # Edge case: n < 2
 prime_sieve(1)
 

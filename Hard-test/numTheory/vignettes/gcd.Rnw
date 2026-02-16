@@ -1,8 +1,11 @@
-\documentclass[a4paper]{article}
+\documentclass{article}
+\usepackage{Rd}
+\SweaveOpts{concordance=TRUE}
+
 %\VignetteIndexEntry{Greatest Common Divisor}
 %\VignettePackage{numTheory}
 
-\title{Greatest Common Divisor using gcd_cpp}
+\title{Greatest Common Divisor using gcd\_cpp}
 \author{Siddhesh Akole}
 
 \begin{document}
@@ -15,14 +18,18 @@ leaving a remainder.
 
 \section{Inputs}
 The function takes two integer inputs:
-- \code{a}: the first integer.  
-- \code{b}: the second integer.  
+
+\begin{itemize}
+\item \code{a}: the first integer.
+\item \code{b}: the second integer.
+\end{itemize}
+
 The output is a single integer representing the greatest common divisor of \code{a} and \code{b}.
 
 \section{Basic Example}
 Here we compute the GCD of two numbers:
 
-<<echo=TRUE, results=TRUE>>=
+<<echo=TRUE, results=verbatim>>=
 library(numTheory)
 
 # Compute gcd of 48 and 18
@@ -31,10 +38,13 @@ gcd_cpp(48, 18)
 
 \section{Properties}
 The GCD has several useful properties:
-- If one number divides the other, the GCD is the smaller number.  
-- If the numbers are coprime (no common factors), the GCD is 1.  
 
-<<echo=TRUE, results=TRUE>>=
+\begin{itemize}
+\item If one number divides the other, the GCD is the smaller number.
+\item If the numbers are coprime (no common factors), the GCD is 1.
+\end{itemize}
+
+<<echo=TRUE, results=verbatim>>=
 # Coprime example
 gcd_cpp(17, 29)
 
@@ -43,8 +53,8 @@ gcd_cpp(12, 36)
 @
 
 \section{Constraints}
-In R, exact integer numerical range is: \code{.Machine\$integer.max} to  \code{- .Machine\$integer.max}.  
-For doubles, the numerical range is: \code{.Machine\$double.xmax}  to \code{.Machine\$double.xmin}.
+In R, exact integer numerical range is: \code{.Machine\$integer.max} to \code{- .Machine\$integer.max}.  
+For doubles, the numerical range is: \code{.Machine\$double.xmax} to \code{.Machine\$double.xmin}.
 
 \section{Complexity}
 The \code{gcd_cpp} function uses the Euclidean algorithm, which runs in 
