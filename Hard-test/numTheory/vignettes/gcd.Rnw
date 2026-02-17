@@ -1,6 +1,5 @@
 \documentclass{article}
 \usepackage{Rd}
-\SweaveOpts{concordance=TRUE}
 
 %\VignetteIndexEntry{Greatest Common Divisor}
 %\VignettePackage{numTheory}
@@ -29,7 +28,7 @@ The output is a single integer representing the greatest common divisor of \code
 \section{Basic Example}
 Here we compute the GCD of two numbers:
 
-<<echo=TRUE, results=verbatim>>=
+<<echo=TRUE, results='verbatim'>>=
 library(numTheory)
 
 # Compute gcd of 48 and 18
@@ -44,7 +43,7 @@ The GCD has several useful properties:
 \item If the numbers are coprime (no common factors), the GCD is 1.
 \end{itemize}
 
-<<echo=TRUE, results=verbatim>>=
+<<echo=TRUE, results='verbatim'>>=
 # Coprime example
 gcd_cpp(17, 29)
 

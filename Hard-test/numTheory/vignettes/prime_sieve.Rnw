@@ -1,9 +1,8 @@
 \documentclass{article}
 \usepackage{Rd}
-\SweaveOpts{concordance=TRUE}
 
-\VignetteIndexEntry{Prime Number Sieve}
-\VignettePackage{numTheory}
+%\VignetteIndexEntry{Prime Number Sieve}
+%\VignettePackage{numTheory}
 
 \title{Prime Number Generation using prime\_sieve}
 \author{Siddhesh Akole}
@@ -25,7 +24,7 @@ The function takes one integer input:
 \section{Example}
 Here we generate prime numbers up to 30:
 
-<<echo=TRUE, results=verbatim>>=
+<<echo=TRUE, results='verbatim'>>=
 library(numTheory)
 
 prime_sieve(30)
@@ -42,7 +41,7 @@ For doubles, the representable range is: \code{.Machine\$double.xmin} to \code{.
 \item Edge case3: Large \code{n}: performance depends on memory, but algorithm remains efficient.
 \end{itemize}
 
-<<echo=TRUE, results=verbatim>>=
+<<echo=TRUE, results='verbatim'>>=
 # Edge case: n < 2
 prime_sieve(1)
 
