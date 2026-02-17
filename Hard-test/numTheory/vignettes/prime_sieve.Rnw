@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{Rd}
 
+%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Prime Number Sieve}
 %\VignettePackage{numTheory}
+%\VignetteEncoding{UTF-8}
 
 \title{Prime Number Generation using prime\_sieve}
 \author{Siddhesh Akole}

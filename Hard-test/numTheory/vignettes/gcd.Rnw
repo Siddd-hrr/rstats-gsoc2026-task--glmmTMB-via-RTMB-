@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{Rd}
 
+%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Greatest Common Divisor}
 %\VignettePackage{numTheory}
+%\VignetteEncoding{UTF-8}
 
 \title{Greatest Common Divisor using gcd\_cpp}
 \author{Siddhesh Akole}

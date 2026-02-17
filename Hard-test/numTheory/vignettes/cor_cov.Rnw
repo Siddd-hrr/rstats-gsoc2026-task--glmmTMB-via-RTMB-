@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{Rd}
 
+%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Correlation and Covariance}
 %\VignettePackage{numTheory}
+%\VignetteEncoding{UTF-8}
 
 \title{Correlation and Covariance using cor\_cov}
 \author{Siddhesh Akole}

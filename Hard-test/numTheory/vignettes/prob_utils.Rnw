@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{Rd}
 
+%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Probability Utilities}
 %\VignettePackage{numTheory}
+%\VignetteEncoding{UTF-8}
 
 \title{Probability Utilities in numTheory}
 \author{Siddhesh Akole}

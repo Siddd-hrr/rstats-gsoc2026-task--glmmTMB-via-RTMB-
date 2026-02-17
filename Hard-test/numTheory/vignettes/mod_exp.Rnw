@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{Rd}
 
+%\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Modular Exponentiation}
 %\VignettePackage{numTheory}
+%\VignetteEncoding{UTF-8}
 
 \title{Modular Exponentiation using mod\_exp}
 \author{Siddhesh Akole}
