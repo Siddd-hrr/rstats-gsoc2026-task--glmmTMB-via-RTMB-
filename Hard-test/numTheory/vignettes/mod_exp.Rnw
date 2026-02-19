@@ -12,7 +12,7 @@
 \begin{document}
 \maketitle
 
-This vignette demonstrates the \code{mod_exp} function from the \pkg{numTheory} package.
+This vignette demonstrates the \texttt{mod\_exp} function from the numTheory package.
 The function computes modular exponentiation, efficiently even for large exponents. 
 This operation is fundamental in number theory and cryptography.
 
@@ -20,9 +20,9 @@ This operation is fundamental in number theory and cryptography.
 The function takes three numeric inputs:
 
 \begin{itemize}
-\item \code{base}: the number to be exponentiated.
-\item \code{exp}: the exponent.
-\item \code{mod}: the modulus under which the computation is performed.
+\item \texttt{base}: the number to be exponentiated.
+\item \texttt{exp}: the exponent.
+\item \texttt{mod}: the modulus under which the computation is performed.
 \end{itemize}
 
 \section{Example}
@@ -45,15 +45,15 @@ mod_exp(base = 7, exp = 5, mod = 1)
 @
 
 \section{Constraints}
-In R, exact integer numerical range is: \code{.Machine\$integer.max} to \code{- .Machine\$integer.max}.  
-For doubles, the numerical range is: \code{.Machine\$double.xmax} to \code{.Machine\$double.xmin}.
+In R, exact integer numerical range is: \texttt{.Machine\$integer.max} to \texttt{- .Machine\$integer.max}.  
+For doubles, the numerical range is: \texttt{.Machine\$double.xmax} to \texttt{.Machine\$double.xmin}.
 
 \section{Complexity}
-The \code{mod_exp} function uses fast exponentiation, which runs in 
+The \texttt{mod\_exp} function uses fast exponentiation, which runs in 
 \(\mathcal{O}(\log b)\) time, making it efficient even for very large exponents.
 
 \section{Summary}
-The \code{mod_exp} function provides a reliable and efficient way to perform modular
+The \texttt{mod\_exp} function provides a reliable and efficient way to perform modular
 exponentiation, making it useful for applications in number theory, algorithms, and
 cryptography.
 
