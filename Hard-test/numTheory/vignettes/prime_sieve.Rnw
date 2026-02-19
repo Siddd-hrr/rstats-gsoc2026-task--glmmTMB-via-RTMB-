@@ -12,7 +12,7 @@
 \begin{document}
 \maketitle
 
-This vignette demonstrates the \code{prime_sieve} function from the \pkg{numTheory} package.
+This vignette demonstrates the \texttt{prime\_sieve} function from the numTheory package.
 The function generates all prime numbers up to a given limit using the Sieve of Eratosthenes,
 an efficient algorithm for prime number generation.
 
@@ -20,7 +20,7 @@ an efficient algorithm for prime number generation.
 The function takes one integer input:
 
 \begin{itemize}
-\item \code{n}: the upper bound up to which prime numbers are generated.
+\item \texttt{n}: the upper bound up to which prime numbers are generated.
 \end{itemize}
 
 \section{Example}
@@ -33,14 +33,14 @@ prime_sieve(30)
 @
 
 \section{Constraints}
-In R, exact integer range is: \code{- .Machine\$integer.max} to \code{.Machine\$integer.max}.  
-For doubles, the representable range is: \code{.Machine\$double.xmin} to \code{.Machine\$double.xmax}.  
+In R, exact integer range is: \texttt{- .Machine\$integer.max} to \texttt{.Machine\$integer.max}.  
+For doubles, the representable range is: \texttt{.Machine\$double.xmin} to \texttt{.Machine\$double.xmax}.  
 
 \section{Edge Cases}
 \begin{itemize}
-\item Edge case1: \code{n < 2}: returns an empty vector (no primes below 2).
-\item Edge case2: \code{n = 2}: returns \code{2} as the only prime.
-\item Edge case3: Large \code{n}: performance depends on memory, but algorithm remains efficient.
+\item Edge case1: \texttt{n < 2}: returns an empty vector (no primes below 2).
+\item Edge case2: \texttt{n = 2}: returns \texttt{2} as the only prime.
+\item Edge case3: Large \texttt{n}: performance depends on memory, but algorithm remains efficient.
 \end{itemize}
 
 <<echo=TRUE, results='verbatim'>>=
@@ -52,12 +52,12 @@ prime_sieve(2)
 @
 
 \section{Complexity}
-The \code{prime_sieve} function uses the Sieve of Eratosthenes, which runs in 
+The \texttt{prime\_sieve} function uses the Sieve of Eratosthenes, which runs in 
 \(\mathcal{O}(n \log \log n)\) time, making it efficient for generating primes 
 up to large limits.
 
 \section{Summary}
-The \code{prime_sieve} function provides a fast and reliable way to generate prime numbers,
+The \texttt{prime\_sieve} function provides a fast and reliable way to generate prime numbers,
 useful for number theory, cryptography, and algorithmic applications.
 
 \end{document}
