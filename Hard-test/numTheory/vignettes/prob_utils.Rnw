@@ -13,14 +13,14 @@
 \maketitle
 
 This vignette demonstrates the probability functions provided by the 
-\pkg{numTheory} package: \code{normal_pdf}, \code{normal_cdf}.
+numTheory package: \texttt{normal_pdf}, \texttt{normal_cdf}.
 These functions allow users to compute probability density and cumulative distribution.
 
 \section{normal_pdf}
 The probability density function of the normal distribution gives the height of the 
 curve at a point. While the density itself is not a probability, it indicates how 
-concentrated values are around that point. Here, \code{x} is the point being evaluated, 
-\code{mean} is the center of the distribution, and \code{sd} is the standard deviation, 
+concentrated values are around that point. Here, \texttt{x} is the point being evaluated, 
+\texttt{mean} is the center of the distribution, and \texttt{sd} is the standard deviation, 
 which controls the spread of the distribution.
 
 normal_pdf(x,mean,sd)
@@ -37,8 +37,8 @@ normal_pdf(1.96, mean = 0, sd = 1)
 
 \section{normal_cdf}
 The cumulative distribution function provides probabilities that a random variable
-is less than or equal to a given value. Here, \code{mean} is the center of the 
-distribution and \code{sd} is the standard deviation.
+is less than or equal to a given value. Here, \texttt{mean} is the center of the 
+distribution and \texttt{sd} is the standard deviation.
 
 normal_cdf(x,mean,sd)
 
