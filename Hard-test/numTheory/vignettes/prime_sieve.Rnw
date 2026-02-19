@@ -45,7 +45,7 @@ For doubles, the representable range is: \texttt{.Machine\$double.xmin} to \text
 
 <<echo=TRUE, results='verbatim'>>=
 # Edge case: n < 2
-prime_sieve(1)
+try(prime_sieve(1))  # Error! as n >= 2 only allowed.
 
 # Edge case: n = 2
 prime_sieve(2)
