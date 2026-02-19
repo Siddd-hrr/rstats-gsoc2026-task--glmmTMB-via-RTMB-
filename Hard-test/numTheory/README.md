@@ -21,7 +21,7 @@ numTheory
     ```
 -   **Step2:** 
     ```bash
-    devtools::install_github("Siddd-hrr/rstats-gsoc2026-task--glmmTMB-via-RTMB-/Hard-test/numTheory") 
+    devtools::install_github("Siddd-hrr/rstats-gsoc2026-task--glmmTMB-via-RTMB-/Hard-test/numTheory", build_vignettes = TRUE) 
     ```
 -   **Step3:**  
     ```bash
